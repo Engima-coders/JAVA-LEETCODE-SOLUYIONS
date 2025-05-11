@@ -1,0 +1,13 @@
+public class Solution {
+    public boolean hasCycle(ListNode head) {
+        ListNode tur=head;
+        ListNode hare=head;
+        while (hare!=null && hare.next!=null){
+            
+            hare=hare.next.next;
+            tur=tur.next;
+            if (tur==hare){return true;}
+        }
+        return false;
+    }
+}
